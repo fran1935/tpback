@@ -1,0 +1,210 @@
+/* Estilos generales */
+* {
+    box-sizing: border-box;
+    
+  }
+body {
+    background-color: aqua;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 20px;
+    padding: 0;
+    text-align: center;
+    
+    
+}
+
+header {
+    background-color: rgb(179, 233, 236);
+    color: #f8f0f0;
+    line-height: 1.6;
+    font-family: 'Quicksand', sans-serif;
+    padding: 0 1.5em;
+    font-size: 24px;
+    
+    
+    
+  }
+
+h1 {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5), 2px 2px 5px rgb(89, 148, 216); /* Puedes añadir múltiples sombras separadas por comas */
+    font-size: 2.5em;
+    color: #2b67d6;
+    
+
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+  }
+
+li{
+    
+    background-color: rgb(179, 233, 236);
+    margin: 5px;
+    padding: 20px;
+    box-shadow: 10px 10px 5px #888888;
+    
+}
+a{
+    font-size: 1.5em;
+    background-color: azure;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight:  900;
+    padding: 5px;
+    color: #2b67d6;
+    font-size: 24px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5), 2px 2px 5px rgb(89, 148, 216); /* Puedes añadir múltiples sombras separadas por comas */
+    .animate__animated {
+        -webkit-animation-duration: 1s;
+        animation-duration: 1s;
+        -webkit-animation-duration: var(--animate-duration);
+        animation-duration: var(--animate-duration);
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+      }
+}
+
+
+thead{
+  color: #2b67d6;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5), 2px 2px 5px rgb(89, 148, 216); /* Puedes añadir múltiples sombras separadas por comas */
+}
+
+table {
+  margin-left: auto;
+  margin-right: auto;
+  /*border-collapse: collapse; /* Colapsar los bordes en uno solo */
+  width: 70%; /* Ancho de la tabla, puedes ajustarlo según sea necesario */
+  width: 80%; /* Ancho de la tabla */
+  color: #2b67d6;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5), 2px 2px 5px rgb(89, 148, 216); /* Puedes añadir múltiples sombras separadas por comas */
+}
+
+th, td {
+  border: 1px solid black; /* Estilo, ancho y color del borde */
+  padding: 8px; /* Espaciado interno de las celdas */
+  text-align: left; /* Alineación del texto en las celdas */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5), 2px 2px 5px rgb(89, 148, 216); /* Puedes añadir múltiples sombras separadas por comas */
+}
+
+th {
+  background-color: #e5f3a6; /* Color de fondo para las cabeceras */
+}
+
+td {
+  background-color: #d1cbcb; /* Color de fondo para las celdas */
+}
+tbody{
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5), 2px 2px 5px rgb(89, 148, 216); /* Puedes añadir múltiples sombras separadas por comas */
+}
+
+/*form{
+  display: grid;
+  grid-template-rows: 1fr,1fr;
+  width: 100%;
+  padding: .7em;
+  border: none;
+  outline: 0;
+  color: #fff;
+  border-bottom: 1px solid #d63031;
+  background: #7f95be;
+  border: 0;
+  text-transform: uppercase;
+  padding: 1em;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5), 2px 2px 5px rgb(89, 148, 216); /* Puedes añadir múltiples sombras separadas por comas */
+  
+
+/*button {
+  background: rgb(179, 233, 236);
+  border: 0;
+  text-transform: uppercase;
+  padding: .7em;
+}
+
+button:hover,
+button:focus {
+  background: rgb(179, 233, 236);
+  color: #fff;
+  transition: background-color 5s ease-out;
+  outline: 0;
+}*/
+
+/*label{
+  background-color: #b8dde7;
+  display: inline;
+  margin-bottom: 8px;
+  color: #fff;
+  padding: .7em;
+}*/
+
+/*input{
+  grid-row: 1,2;
+  padding: .7em;
+  border: none;
+  background: none;
+  outline: 0;
+  color: #fff;
+  background-color: #b8dde7;
+  border-bottom: 1px solid #d63031;
+  padding: .7em;
+}
+*/
+/*label{
+  grid-row: 2,3;
+  background-color: #e7b8c4;
+  color: #2b67d6;
+  padding: .7em;
+}*/
+.form-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.form-group {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.form-group label {
+  width: 30%;
+  text-align: right;
+  padding-right: 10px;
+}
+
+.form-group input {
+  width: 70%;
+  padding: 5px;
+}
+
+.form-container button {
+  align-self: center;
+  padding: 10px 20px;
+}
+
+.alerta{
+  
+  color: red;
+  font-weight: bold;
+  border-radius: 5px;
+  text-align: center;
+  padding: 10px; 
+  
+  animation: parpadeo 2s infinite alternate;
+}
+@keyframes parpadeo {
+  0%, 100% {
+    color: red;
+  }
+  50% {
+    color: yellow;
+  }
+}

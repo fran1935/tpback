@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=git , initial-scale=1.0">
+    <link rel="icon" href="img/favicon.ico">
+    <!-- <link rel="stylesheet" href="CSS/style.css"> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/style.css') }}">
+    <title>Sobre Fotoaventuras</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <input id="menu-toggle" type="checkbox" />
+            <label class='menu-button-container' for="menu-toggle">
+            <div class='menu-button'></div>
+            </label>
+            <ul class="menu">
+                
+                <li><a href="{{ url_for('index') }}">Inicio</a></li>
+                <li><a href="{{ url_for('nosotros') }}">Nosotros</a></li>
+                <li><a href="{{ url_for('contacto') }}">Contacto</a></li>
+                <li><a href="{{ url_for('nuestrosdestinos') }}">Nuestros Destinos</a></li>
+                
+            </ul>
+            
+        </nav>
+    </header>
+
+    <main class="nosotros nosotros__contenedor">
+       
+
+        <div class="nosotros__grid">
+            <!-- <img src="img/nosotros.webp" alt="imagen nosotros"> -->
+            <img src="{{ url_for('static', filename='img/nosotros.webp') }}" alt="imagen nosotros">
+            <div>
+                <h1 class="nosotros__heading">Nuestra historia</h2>
+                <p>En el vibrante mundo de los viajes fotográficos, donde cada captura es un destello de vida congelado en el tiempo, surge una web revolucionaria que lleva la pasión por la fotografía y la exploración a un nuevo nivel: <b>FOTOAVENTURAS</b>. Esta plataforma online ha sido creada por un equipo de entusiastas fotógrafos y amantes de los viajes, con el objetivo de ofrecer experiencias únicas en los rincones más pintorescos y sorprendentes de Argentina.</p>
+                <p>La historia de <b>FOTOAVENTURAS</b> comienza con dos amigos, Martín y Sofía, que compartían un amor inquebrantable por la fotografía y la aventura. Después de años de explorar juntos los paisajes más deslumbrantes de su país, se dieron cuenta de que querían compartir su pasión con el mundo. Así nació la idea de crear una plataforma que no solo ofreciera viajes fotográficos, sino que también fomentara la conexión con la naturaleza y la cultura de Argentina.</p>
+                <p>Con determinación y dedicación, Martín y Sofía lanzaron <b>FOTOAVENTURAS</b>, diseñando cuidadosamente cada viaje para garantizar experiencias auténticas y enriquecedoras. Desde las majestuosas montañas de la Patagonia hasta las coloridas calles de Buenos Aires, cada destino fue seleccionado para inspirar y cautivar a los amantes de la fotografía.</p>
+                <p>Lo que distingue a <b>FOTOAVENTURAS</b> es su compromiso con la excelencia y la atención al detalle. Cada viaje está liderado por guías expertos locales que conocen cada rincón y secretos fotográficos de la región. Además, se proporciona equipo fotográfico de alta calidad para aquellos que no lo posean, garantizando que todos los participantes tengan la oportunidad de capturar momentos inolvidables.</p>
+                <p>Las críticas de los clientes de <b>FOTOAVENTURAS</b> son el testimonio de su éxito. Los viajeros elogian no solo la belleza de los destinos, sino también la pasión y el conocimiento de los guías, así como la organización impecable de cada viaje. Desde principiantes hasta fotógrafos profesionales, todos encuentran inspiración y aprendizaje en las experiencias ofrecidas por <b>FOTOAVENTURAS</b>.</p>
+                <p>Con el tiempo, <b>FOTOAVENTURAS</b> se ha convertido en sinónimo de prestigio en la comunidad de viajes fotográficos. Sus expediciones son codiciadas por aquellos que buscan una combinación perfecta de aventura y arte, y su compromiso con la sostenibilidad y el turismo responsable ha ganado elogios en todo el mundo.</p>
+                <p>Así, mientras el sol se pone sobre los picos de los Andes y las luces de la ciudad se encienden en Buenos Aires, <b>FOTOAVENTURAS</b> continúa inspirando a viajeros y fotógrafos a descubrir la belleza infinita de Argentina a través de sus lentes.</p>
+            </div> 
+        </div>
+    </main>
+
+    <footer>
+        <div class="redesFooter">
+            <h3>Seguinos</h3>
+            <a href="https://www.linkedin.com/" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/128/1384/1384171.png" width="20">
+            </a>
+            <a href="https://www.facebook.com/" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/128/1384/1384168.png" width="20">
+            </a>
+            <a href="https://www.instagram.com/" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/128/1384/1384172.png" width="20">
+            </a>
+            <a href="https://www.tiktok.com/" target="_blank"> 
+                <img src="https://cdn-icons-png.flaticon.com/128/3046/3046113.png" width="20">
+            </a>
+        </div>
+        <div class="mapaFooter">
+            <h3>Nuestras oficinas 
+                <img src="https://cdn-icons-png.flaticon.com/128/15567/15567908.png" width="20">
+            </h3>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6568.043447416509!2d-58.37403458351481!3d-34.60361218081263!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccacb0b1afcaf%3A0x8d53a5cf4f399e9c!2zR2FsZXLDrWFzIFBhY8OtZmljbw!5e0!3m2!1ses-419!2sar!4v1714345582251!5m2!1ses-419!2sar" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <p>Galerías Pacifico, local 121</p>
+            <p>CABA, Buenos Aires, Argentina</p>
+        </div>
+        <div class="AyudaFooter">
+            <h3>Más información</h3>
+            <p>Whatsapp  
+                <a href="https://www.whatsapp.com/?lang=es_LA" target="_blank">
+                    <img src="https://cdn-icons-png.flaticon.com/128/1384/1384178.png" width="20">
+                </a>
+            </p>
+            <p>Teléfonos  
+                <a href="contacto.html" target="_blank">
+                    <img src="https://cdn-icons-png.flaticon.com/128/7313/7313423.png" width="20">
+                </a>
+            </p>
+            <p>Formulario  
+                <a href="contacto.html" target="_blank">
+                    <img src="https://cdn-icons-png.flaticon.com/128/1644/1644229.png" width="20">
+                </a>
+            </p>
+        </div>
+        <div class="mediosdePagoFooter">
+            <h3>Medios de Pago</h3>
+                <img src="https://cdn-icons-png.flaticon.com/128/12956/12956788.png" width="20">
+                <img src="https://cdn-icons-png.flaticon.com/128/15539/15539971.png" width="20">
+                <img src="https://cdn-icons-png.flaticon.com/128/349/349247.png" width="20">
+                <img src="https://cdn-icons-png.flaticon.com/128/1325/1325284.png" width="20">
+        </div>
+        <div class="copyFooter">
+            <p>&copy;Fotoaventuras 2024</p>
+        </div>
+    </footer>
+    
+</body>
+</html>

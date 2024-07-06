@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscar por Documento</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Buscar Contacto por Documento</h1>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        {% for category, message in messages %}
+          <div class="alert alert-{{ category }}">
+            {{ message }}
+          </div>
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
+    <div class="form-container">
+        <form action="{{ url_for('buscar_por_documento') }}" method="POST">
+            <label for="documento">Documento:</label>
+            <input type="text" id="documento" name="documento" required>
+            <button type="submit">Buscar</button>
+        </form>
+    </div>
+    {% if results is not none %}
+        {% if results|length > 0 %}
+            <h2>Resultados</h2>
+            <ul>
+                {% for item in results %}
+                    <li>
+                        {{ item.documento }} - {{ item.nombre }} - {{ item.email }} - {{ item.consulta }} - {{ item.telefono }} - {{ item.opcion_pago }} - {{ item.nacionalidad }} - {{ item.sexo }}
+                        <a href="{{ url_for('edit_contacto', id=item.id) }}">Editar</a>
+                        <a href="{{ url_for('delete_contacto', id=item.id) }}" onclick="return confirm('¿Está seguro de que desea eliminar este contacto?');">Eliminar</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p class="alerta">El repuesto solicitado no está en stock.</p>
+        {% endif %}
+    {% else %}
+        {% if request.method == 'POST' %}
+            <p class="alerta">Por favor, ingrese un documento válido para buscar repuestos.</p>
+        {% endif %}
+    {% endif %}
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('registro_contactos') }}">Volver al Inicio</a></li>
+        </ul>
+    </nav>
+</body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=git , initial-scale=1.0">
+    <!-- <link rel="icon" href="img/favicon.ico"> -->
+    <!-- <link rel="stylesheet" href="CSS/style.css"> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='img/favicon.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/style.css') }}">
+    <title>Nuestros destinos</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <input id="menu-toggle" type="checkbox" />
+            <label class='menu-button-container' for="menu-toggle">
+            <div class='menu-button'></div>
+            </label>
+            <ul class="menu">
+                
+                <li><a href="{{ url_for('index') }}">Inicio</a></li>
+                <li><a href="{{ url_for('nosotros') }}">Nosotros</a></li>
+                <li><a href="{{ url_for('contacto') }}">Contacto</a></li>
+                <li><a href="{{ url_for('nuestrosdestinos') }}">Nuestros Destinos</a></li>
+                
+            </ul>
+           
+        </nav>
+    </header>
+    <main>
+        <div class="DestinoContenedor" id="ParqueGlaciares">
+            <div class="Destino">
+                <h2>Parque Nacional Los Glaciares, Santa Cruz</h2>
+                <p>Este parque es el hogar del famoso Glaciar Perito Moreno, así como de otros impresionantes glaciares, lagos y montañas. Las oportunidades para capturar paisajes de hielo y naturaleza son infinitas.</p>
+                <a href="contacto.html" class="DestinoBoton">Reservar</a>
+            </div>
+            <div class="DestinoImagenPrincipal"><img src="{{ url_for('static', filename='img/glaciar_00.jpg' ) }} " alt=""></div>
+            <div class="DestinoImagen"><img src="{{ url_for('static', filename='img/glaciar_01.jpg' ) }} " alt=""><img src="{{ url_for('static', filename='img/glaciar_02.png' ) }} " alt=""><img src="{{ url_for('static', filename='img/glaciar_03.jpeg' ) }} " alt="">
+            </div>
+        </div>
+        <div class="DestinoContenedorRev" id="SaltaQuebrada">
+            <div class="Destino">
+                <h2>Salta y la Quebrada de Humahuaca, Salta y Jujuy</h2>
+                <p>La región noroeste de Argentina ofrece una gran diversidad de paisajes desérticos, montañas multicolores y pueblos pintorescos. La Quebrada de Humahuaca, declarada Patrimonio de la Humanidad por la UNESCO, es especialmente fotogénica.</p>
+                <a href="contacto.html" class="DestinoBoton">Reservar</a>
+            </div>
+            <div class="DestinoImagenPrincipal"><img src="{{ url_for('static', filename='img/salta_00.jpg' ) }} " alt=""></div>
+            <div class="DestinoImagen"><img src="{{ url_for('static', filename='img/salta_01.jpeg' ) }} " alt=""><img src="{{ url_for('static', filename='img/salta_02.jpg' ) }} " alt=""><img src="{{ url_for('static', filename='img/salta_03.jpg' ) }} " alt=""></div>
+        </div>
+        <div class="DestinoContenedor" id="NahuelHuapi">
+            <div class="Destino">
+                <h2>Parque Nacional Nahuel Huapi, Patagonia</h2>
+                <p>Este parque nacional en la provincia de Río Negro y Neuquén cuenta con una belleza natural impresionante, incluyendo lagos cristalinos, montañas nevadas y bosques exuberantes.</p>
+                <a href="contacto.html" class="DestinoBoton">Reservar</a>
+            </div>
+            <div class="DestinoImagenPrincipal"><img src="{{ url_for('static', filename='img/nahuelhuapi_00.jpeg' ) }} " alt=""></div>
+            <div class="DestinoImagen"><img src="{{ url_for('static', filename='img/nahuelhuapi_01.jpg' ) }} " alt=""><img src="{{ url_for('static', filename='img/nahuelhuapi_02.jpg' ) }} " alt=""><img src="{{ url_for('static', filename='img/nahuelhuapi_03.jpg' ) }} " alt=""></div>
+        </div>
+        <div class="DestinoContenedorRev" id="Iguazu">
+            <div class="Destino">
+                <h2>Cataratas del Iguazú, Misiones</h2>
+                <p>Las majestuosas cataratas del Iguazú, ubicadas en la frontera entre Argentina y Brasil, ofrecen vistas espectaculares y la oportunidad de capturar la fuerza y la belleza de la naturaleza en su máximo esplendor.</p>
+                <a href="contacto.html" class="DestinoBoton">Reservar</a>
+            </div>
+            <div class="DestinoImagenPrincipal"><img src="{{ url_for('static', filename='img/iguazu_00.jpeg' ) }} " alt=""></div>
+            <div class="DestinoImagen"><img src="{{ url_for('static', filename='img/iguazu_01.webp' ) }} " alt=""><img src="{{ url_for('static', filename='img/iguazu_02.webp' ) }} " alt=""><img src="{{ url_for('static', filename='img/iguazu_03.jpg' ) }} " alt=""></div>
+        </div>
+        <div class="DestinoContenedor" id="ValleLuna">
+            <div class="Destino">
+                <h2>Valle de la Luna, San Juan</h2>
+                <p>Este paisaje lunar en la provincia de San Juan parece sacado de otro planeta, con formaciones rocosas únicas y un paisaje desértico que ofrece oportunidades únicas para la fotografía.</p>
+                <a href="contacto.html" class="DestinoBoton">Reservar</a>
+            </div>
+            <div class="DestinoImagenPrincipal"><img src="{{ url_for('static', filename='img/sanjuan_00.jpg' ) }} " alt=""></div>
+            <div class="DestinoImagen"><img src="{{ url_for('static', filename='img/sanjuan_01.jpg' ) }} " alt=""><img src="{{ url_for('static', filename='img/sanjuan_02.jpg' ) }} " alt=""><img src="{{ url_for('static', filename='img/sanjuan_03.webp' ) }} " alt=""></div>
+        </div>
+        <div class="DestinoContenedorRev" id="PeninsulaValdes">
+            <div class="Destino">
+                <h2>Península Valdés, Chubut</h2>
+                <p>Esta reserva natural en la costa atlántica es conocida por su abundante vida silvestre, incluyendo ballenas, pingüinos, lobos marinos y aves marinas. Es un paraíso para los amantes de la vida salvaje y la fotografía de naturaleza.</p>
+                <a href="contacto.html" class="DestinoBoton">Reservar</a>
+            </div>
+            <div class="DestinoImagenPrincipal"><img src="{{ url_for('static', filename='img/peninsulavaldes_00.jpg' ) }} " alt=""></div>
+            <div class="DestinoImagen"><img src="{{ url_for('static', filename='img/peninsulavaldes_01.jpg' ) }} " alt=""><img src="{{ url_for('static', filename='img/peninsulavaldes_02.webp' ) }} " alt=""><img src="{{ url_for('static', filename='img/peninsulavaldes_03.jpg' ) }} " alt=""></div>
+        </div>
+        <div class="DestinoContenedor" id="BuenosAires">
+            <div class="Destino">
+                <h2>Ciudad de Buenos Aires</h2>
+                <p>La vibrante capital argentina ofrece una mezcla de arquitectura europea, arte callejero, vida nocturna y cultura que brinda innumerables oportunidades para capturar la esencia de la ciudad en imágenes.</p>
+                <a href="contacto.html" class="DestinoBoton">Reservar</a>
+            </div>
+            <div class="DestinoImagenPrincipal"><img src="{{ url_for('static', filename='img/buenosaires_00.jpg' ) }} " alt=""></div>
+            <div class="DestinoImagen"><img src= "{{ url_for('static', filename='img/buenosaires_01.jpg' ) }} " alt=""><img src="{{ url_for('static', filename='img/buenosaires_02.jpg' ) }} " alt=""><img src="{{ url_for('static', filename='img/buenosaires_03.jpg' ) }} " alt=""></div>
+        </div>
+        <div class="DestinoContenedorRev" id="Ushuaia">
+            <div class="Destino">
+                <h2>Ushuaia y Tierra del Fuego</h2>
+                <p>Conocida como "el fin del mundo", Ushuaia ofrece paisajes impresionantes, como montañas nevadas, bosques subantárticos y canales glaciares, que son ideales para la fotografía de naturaleza y aventura.</p>
+                <a href="contacto.html" class="DestinoBoton">Reservar</a>
+                <!-- <img src="{{ url_for('static', filename='img/nosotros.webp') }}" alt="imagen nosotros"> -->
+            </div>
+            <div class="DestinoImagenPrincipal"><img src="{{ url_for('static', filename='img/tierradelfuego_00.jpg' ) }} " alt=""></div>
+            <div class="DestinoImagen"><img src="{{ url_for('static', filename='img/tierradelfuego_01.jpg' ) }} " alt=""><img src="{{ url_for('static', filename='img/tierradelfuego_02.jpg' ) }} " alt=""><img src="{{ url_for('static', filename='img/tierradelfuego_03.jpg' ) }} " alt=""></div>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="redesFooter">
+            <h3>Seguinos</h3>
+            <a href="https://www.linkedin.com/" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/128/1384/1384171.png" width="20">
+            </a>
+            <a href="https://www.facebook.com/" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/128/1384/1384168.png" width="20">
+            </a>
+            <a href="https://www.instagram.com/" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/128/1384/1384172.png" width="20">
+            </a>
+            <a href="https://www.tiktok.com/" target="_blank"> 
+                <img src="https://cdn-icons-png.flaticon.com/128/3046/3046113.png" width="20">
+            </a>
+        </div>
+        <div class="mapaFooter">
+            <h3>Nuestras oficinas 
+                <img src="https://cdn-icons-png.flaticon.com/128/15567/15567908.png" width="20">
+            </h3>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6568.043447416509!2d-58.37403458351481!3d-34.60361218081263!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccacb0b1afcaf%3A0x8d53a5cf4f399e9c!2zR2FsZXLDrWFzIFBhY8OtZmljbw!5e0!3m2!1ses-419!2sar!4v1714345582251!5m2!1ses-419!2sar" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <p>Galerías Pacifico, local 121</p>
+            <p>CABA, Buenos Aires, Argentina</p>
+        </div>
+        <div class="AyudaFooter">
+            <h3>Más información</h3>
+            <p>Whatsapp  
+                <a href="https://www.whatsapp.com/?lang=es_LA" target="_blank">
+                    <img src="https://cdn-icons-png.flaticon.com/128/1384/1384178.png" width="20">
+                </a>
+            </p>
+            <p>Teléfonos  
+                <a href="contacto.html" target="_blank">
+                    <img src="https://cdn-icons-png.flaticon.com/128/7313/7313423.png" width="20">
+                </a>
+            </p>
+            <p>Formulario  
+                <a href="contacto.html" target="_blank">
+                    <img src="https://cdn-icons-png.flaticon.com/128/1644/1644229.png" width="20">
+                </a>
+            </p>
+        </div>
+        <div class="mediosdePagoFooter">
+            <h3>Medios de Pago</h3>
+                <img src="https://cdn-icons-png.flaticon.com/128/12956/12956788.png" width="20">
+                <img src="https://cdn-icons-png.flaticon.com/128/15539/15539971.png" width="20">
+                <img src="https://cdn-icons-png.flaticon.com/128/349/349247.png" width="20">
+                <img src="https://cdn-icons-png.flaticon.com/128/1325/1325284.png" width="20">
+        </div>
+        <div class="copyFooter">
+            <p>&copy;Fotoaventuras 2024</p>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=git , initial-scale=1.0">
+    <link rel="icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- <link rel="stylesheet" href="CSS/style.css"> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/style.css') }}">
+    <title>Fotoaventuras</title>
+    <!-- Color principal #3dc4e6 -->
+</head>
+<body>
+    <header>
+        <nav>
+            <input id="menu-toggle" type="checkbox" />
+            <label class='menu-button-container' for="menu-toggle">
+            <div class='menu-button'></div>
+            </label>
+            <ul class="menu">
+                
+                
+                <li><a href="{{ url_for('index') }}">Inicio</a></li>
+                <li><a href="{{ url_for('nosotros') }}">Nosotros</a></li>
+                <li><a href="{{ url_for('contacto') }}">Contacto</a></li>
+                <li><a href="{{ url_for('nuestrosdestinos') }}">Nuestros Destinos</a></li>
+                <!-- <li><a href="{{ url_for('registro_contactos') }}">Regitactos</a></li> -->
+                <li><a href="#" id="registroContactosLink">Registro Contactos</a></li> <!-- Enlace con id -->
+                
+            </ul>
+            
+        </nav>
+    </header>
+    <main class="IndexMain">
+        <div class="contenedor-imagen">
+            <img class="ImagenPortada" src="{{ url_for('static', filename='img/portada_san_juan.jpg' ) }} " alt="paisaje en San Juan">
+            <div class="texto-superpuesto">
+                <h1>FotoAventuras</h1>
+            </div>
+        </div>
+        <div class="bienvenida_mensaje">
+            <p class="bienvenida">Descubre la magia de Argentina a través del lente de tu cámara. Sumérgete en paisajes impresionantes, captura momentos inolvidables y deja que tus fotografías cuenten historias que perdurarán para siempre.</p>
+            <p class="bienvenida">En nuestro mundo de imágenes en constante cambio, cada momento es una oportunidad para crear arte. Desde los majestuosos picos de los Andes hasta las vastas llanuras de la Patagonia, cada rincón de Argentina ofrece una nueva perspectiva que espera ser inmortalizada.</p>
+            <p class="bienvenida">Déjanos llevarte en un viaje único donde la belleza de la naturaleza se fusiona con tu pasión por la fotografía. Nuestros tours guiados por expertos te llevarán a lugares que desafiarán tus habilidades y despertarán tu creatividad, mientras te sumerges en la riqueza cultural y la diversidad geográfica que define a Argentina.</p>
+            <p class="bienvenida">No importa si eres un fotógrafo aficionado que busca mejorar sus habilidades o un profesional en busca de la próxima gran toma, aquí encontrarás la inspiración y el apoyo que necesitas para llevar tus fotografías al siguiente nivel.</p>
+            <p class="bienvenida">Prepárate para una experiencia que va más allá de la imagen estática. Únete a nosotros en un viaje que te llevará a explorar, aprender y crecer como fotógrafo, mientras descubres la verdadera esencia de Argentina a través del objetivo de tu cámara.</p>
+            <a class="BienvenidaBoton" href="nuestrosdestinos.html">¿Estás listo para capturar Argentina con nosotros?</a>
+        </div>
+        <div class="galeria">
+            <input type="radio" name="position" checked />
+            <input type="radio" name="position" />
+            <input type="radio" name="position" />
+            <input type="radio" name="position" />
+            <input type="radio" name="position" />
+            <input type="radio" name="position" />
+            <input type="radio" name="position" />
+            <input type="radio" name="position" />
+            <div id="imagenes">
+            <div class="foto"><a href="nuestrosdestinos.html#ParqueGlaciares"><img src="{{ url_for('static', filename='img/glaciar_00.jpg' ) }} " alt=""></a></div>
+            <div class="foto"><a href="nuestrosdestinos.html#SaltaQuebrada"><img src="{{ url_for('static', filename='img/salta_00.jpg' ) }} " alt=""></a></div>
+            <div class="foto"><a href="nuestrosdestinos.html#NahuelHuapi"><img src="{{ url_for('static', filename='img/nahuelhuapi_00.jpeg' ) }} " alt=""></a></div>
+            <div class="foto"><a href="nuestrosdestinos.html#Iguazu"><img src="{{ url_for('static', filename='img/iguazu_00.jpeg' ) }} " alt=""></a></div>
+            <div class="foto"><a href="nuestrosdestinos.html#ValleLuna"><img src="{{ url_for('static', filename='img/sanjuan_00.jpg' ) }} " alt=""></a></div>
+            <div class="foto"><a href="nuestrosdestinos.html#PeninsulaValdes"><img src="{{ url_for('static', filename='img/peninsulavaldes_00.jpg' ) }} " alt=""></a></div>
+            <div class="foto"><a href="nuestrosdestinos.html#BuenosAires"><img src="{{ url_for('static', filename='img/buenosaires_00.webp' ) }} " alt=""></a></div>
+            <div class="foto"><a href="nuestrosdestinos.html#Ushuaia"><img src="{{ url_for('static', filename='img/tierradelfuego_00.jpg' ) }} " alt=""></a></div>       
+            <div>
+        </div>
+    </main>
+    <section class="anfitrion contenedor seccion">
+        <div class="anfitrion__contenido">
+            <h2 class="anfitrion__heading">Sobre Nosotros</h2>
+            <p class="anfitrion__texto">Lo que distingue a <b>FOTOAVENTURAS</b> es su compromiso con la excelencia y la atención al detalle. Cada viaje está liderado por guías expertos locales que conocen cada rincón y secretos fotográficos de la región. Además, se proporciona equipo fotográfico de alta calidad para aquellos que no lo posean, garantizando que todos los participantes tengan la oportunidad de capturar momentos inolvidables.</p>
+            <!-- <a href="nosotros.html" class="anfitrion__enlace">Más informacion</a> -->
+            <a href="nosotros.html" class="DestinoBoton">Más informacion</a>
+        </div>
+    </section>
+
+    <section class="lugares contenedor seccion">
+        <h2 class="lugares__heading">Descubre experiencias</h2>
+        <p class="experiencias__descripcion">Actividades únicas con expertos locales.</p>
+
+        <div class="lugares__grid">
+            <div class="lugar">
+                <img class="lugar__imagen" src="img/glaciar_00.jpg" alt="imagen seccion vive">
+                <p class="lugar__nombre">Glaciares</p>
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+                <p>"El viaje a los glaciares fue increíble. La organización fue impecable, los guías expertos y la experiencia fotográfica inolvidable. A pesar de pequeños contratiempos, lo calificaría con un sólido 4/5."</p>
+            </div>
+
+            <div class="lugar">
+                <img class="lugar__imagen" src="img/salta_00.jpg" alt="imagen seccion vive">
+                <p class="lugar__nombre">Paisajes Deserticos</p>
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                <p>"Explorar el Norte con paisajes desérticos fue una experiencia única. Los guías conocían cada detalle del terreno, haciéndonos sentir seguros en todo momento. A pesar de los desafíos del terreno, la aventura superó mis expectativas. ¡Definitivamente volveré!"</p>
+            </div>
+
+            <div class="lugar">
+                <img class="lugar__imagen" src="img/nahuelhuapi_00.jpeg" alt="imagen seccion vive">
+                <p class="lugar__nombre">Lagos Cristalinos</p>
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                <p>"Mi viaje a los Lagos de la Patagonia fue una experiencia inolvidable. Los lagos cristalinos y las montañas imponentes crearon un escenario de ensueño. A pesar de las condiciones climáticas cambiantes, la belleza de la región dejó una impresión duradera. ¡Recomiendo esta experiencia a todos los amantes de la naturaleza!"</p>
+            </div>
+
+            <div class="lugar">
+                <img class="lugar__imagen" src="img/iguazu_00.jpeg" alt="imagen seccion vive">
+                <p class="lugar__nombre">Cataratas</p>
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+                <p>"Mi visita a las Cataratas del Iguazú fue simplemente mágica. La organización estuvo a la altura, con guías que conocían cada rincón y hacían la experiencia aún más emocionante. Sin importar los contratiempos, fue un viaje que siempre llevaré en el corazón."</p>
+            </div>
+        </div>
+
+    </section>
+
+    <footer>
+        <div class="redesFooter">
+            <h3>Seguinos</h3>
+            <a href="https://www.linkedin.com/" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/128/1384/1384171.png" width="20">
+            </a>
+            <a href="https://www.facebook.com/" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/128/1384/1384168.png" width="20">
+            </a>
+            <a href="https://www.instagram.com/" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/128/1384/1384172.png" width="20">
+            </a>
+            <a href="https://www.tiktok.com/" target="_blank"> 
+                <img src="https://cdn-icons-png.flaticon.com/128/3046/3046113.png" width="20">
+            </a>
+        </div>
+        <div class="mapaFooter">
+            <h3>Nuestras oficinas 
+                <img src="https://cdn-icons-png.flaticon.com/128/15567/15567908.png" width="20">
+            </h3>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6568.043447416509!2d-58.37403458351481!3d-34.60361218081263!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccacb0b1afcaf%3A0x8d53a5cf4f399e9c!2zR2FsZXLDrWFzIFBhY8OtZmljbw!5e0!3m2!1ses-419!2sar!4v1714345582251!5m2!1ses-419!2sar" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <p>Galerías Pacifico, local 121</p>
+            <p>CABA, Buenos Aires, Argentina</p>
+        </div>
+        <div class="AyudaFooter">
+            <h3>Más información</h3>
+            <p>Whatsapp  
+                <a href="https://www.whatsapp.com/?lang=es_LA" target="_blank">
+                    <img src="https://cdn-icons-png.flaticon.com/128/1384/1384178.png" width="20">
+                </a>
+            </p>
+            <p>Teléfonos  
+                <a href="contacto.html" target="_blank">
+                    <img src="https://cdn-icons-png.flaticon.com/128/7313/7313423.png" width="20">
+                </a>
+            </p>
+            <p>Formulario  
+                <a href="contacto.html" target="_blank">
+                    <img src="https://cdn-icons-png.flaticon.com/128/1644/1644229.png" width="20">
+                </a>
+            </p>
+        </div>
+        <div class="mediosdePagoFooter">
+            <h3>Medios de Pago</h3>
+                <img src="https://cdn-icons-png.flaticon.com/128/12956/12956788.png" width="20">
+                <img src="https://cdn-icons-png.flaticon.com/128/15539/15539971.png" width="20">
+                <img src="https://cdn-icons-png.flaticon.com/128/349/349247.png" width="20">
+                <img src="https://cdn-icons-png.flaticon.com/128/1325/1325284.png" width="20">
+        </div>
+        <div class="copyFooter">
+            <p>&copy;Fotoaventuras 2024</p>
+        </div>
+    </footer>
+    
+    <input type="hidden" id="registroContactosURL" value="{{ url_for('registro_contactos') }}">
+    <script src="{{ url_for('static', filename='scripts/auth.js') }}"></script>
+
+</body>
+</html>

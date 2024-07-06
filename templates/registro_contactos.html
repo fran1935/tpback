@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Inicio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        
+        <h1>Registro Contactos</h1>
+    </header>
+
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            {% for category, message in messages %}
+                <div class="alert alert-{{ category }}">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('lista_contactos') }}">Ver Todos los Contactos</a></li>
+            <li><a href="{{ url_for('buscar_por_nombre') }}">Buscar Contactos por Nombre</a></li>
+            <li><a href="{{ url_for('buscar_por_documento') }}">Buscar Contactos por Documento</a></li>
+            <li><a href="{{ url_for('index') }}">Inicio</a></li>
+            
+            
+        </ul>
+    </nav>
+
+
+    
+    
+</body>
+</html>

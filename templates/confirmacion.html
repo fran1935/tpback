@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/style.css') }}">
+    <title>Confirmación</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <input id="menu-toggle" type="checkbox" />
+            <label class='menu-button-container' for="menu-toggle">
+            <div class='menu-button'></div>
+            </label>
+            <ul class="menu">
+                
+                <li><a href="{{ url_for('lista_contactos') }}">Ver Todos los Contactos</a></li>
+                <li><a href="{{ url_for('index') }}">Inicio</a></li>
+                <li><a href="{{ url_for('nosotros') }}">Nosotros</a></li>
+                <li><a href="{{ url_for('contacto') }}">Contacto</a></li>
+                <li><a href="{{ url_for('nuestrosdestinos') }}">Nuestros Destinos</a></li>
+                
+            </ul>
+        </nav>
+    </header>
+    <main class="container">
+        <h1>¡Gracias por contactarnos!</h1>
+        <p>Hemos recibido tu consulta y te responderemos a la brevedad.</p>
+        <p>Nombre: {{ nombre }}</p>
+        <p>Email: {{ email }}</p>
+        <p>Consulta: {{ consulta }}</p>
+        <p>Teléfono: {{ telefono }}</p>
+        <p>Documento: {{ documento }}</p>
+        <p>Formas de pago preferidas: {{ opcion_pago }}</p>
+
+        <ul class="menu">
+            
+            <li><a href="{{ url_for('index') }}">Volver al inicio</a></li>
+            <li><a href="{{ url_for('registro_contactos') }}">Volver al Registro</a></li>
+            
+        </ul>
+        
+    </main>
+    <footer>
+        
+    </footer>
+</body>
+</html>

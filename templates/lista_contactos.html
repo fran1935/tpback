@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listado de Contactos</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <nav>
+        
+        <ul class="menu">
+            <li><a href="{{ url_for('index') }}">Volver al Inicio</a></li>
+            <li><a href="{{ url_for('registro_contactos') }}">Volver al Registro</a></li>
+            
+        </ul>
+    <h1>Listado Completo de Contactos</h1>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        {% for category, message in messages %}
+          <div class="alert alert-{{ category }}">
+            {{ message }}
+          </div>
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
+
+    <nav>
+        <ul>
+            
+        </ul>
+    </nav>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Email</th>
+                <th>Consulta</th>
+                <th>Telefono</th>
+                <th>Documento</th>
+                <th>Opcion_pago</th>
+                <th>Nacionalidad</th>
+                <th>Sexo</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for contact in results %}
+                <tr>
+                    <td>{{ contact['nombre'] }}</td>
+                    <td>{{ contact['email'] }}</td>
+                    <td>{{ contact['consulta'] }}</td>
+                    <td>{{ contact['telefono'] }}</td>
+                    <td>{{ contact['documento'] }}</td>
+                    <td>{{ contact['opcion_pago'] }}</td>
+                    <td>{{ contact['nacionalidad'] }}</td>
+                    <td>{{ contact['sexo'] }}</td>
+                  
+                    
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    
+
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('registro_contactos') }}">Volver al Registro</a></li>
+            <li><a href="{{ url_for('index') }}">Volver al inicio</a></li>
+        </ul>
+    </nav>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listado de Repuestos</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Listado Completo de Repuestos</h1>
+
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        {% for category, message in messages %}
+          <div class="alert alert-{{ category }}">
+            {{ message }}
+          </div>
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
+
+    {% if results %}
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Email</th>
+                    <th>Consulta</th>
+                    <th>Telefono</th>
+                    <th>Documento</th>
+                    <th>opcion_pago</th>
+                    <th>Nacionalidad</th>
+                    <th>Sexo</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in results %}
+                <tr>
+                    <td>{{ contact['nombre'] }}</td>
+                    <td>{{ contact['email'] }}</td>
+                    <td>{{ contact['consulta'] }}</td>
+                    <td>{{ contact['telefono'] }}</td>
+                    <td>{{ contact['documento'] }}</td>
+                    <td>{{ contact['opcion_pago '] }}</td>
+                    <td>{{ contact['nacionalidad'] }}</td>
+                    <td>{{ contact['sexo'] }}</td>
+                    <td>
+                        <a href="{{ url_for('delete_contacto', id=item.id) }}">Editar</a>
+                        
+                        <form action="{{ url_for('delete_repuesto', id=item.id) }}" method="POST" style="display:inline;">
+                            <input type="hidden" name="return_page" value="{{ request.args.get('return_page', 'registro_contactos') }}">
+                            <button type="submit" onclick="return confirm('¿Está seguro de que desea eliminar este repuesto?');">Eliminar</button>
+                        </form>
+                        
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <p>No hay repuestos disponibles.</p>
+    {% endif %}
+
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+        {% for category, message in messages %}
+        <div class="alert alert-{{ category }}">
+            {{ message }}
+        </div>
+        {% endfor %}
+    {% endif %}
+    {% endwith %}
+
+
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('registro_contactos') }}">Volver al Inicio</a></li>
+        </ul>
+    </nav>
+    <script>
+        function confirmDelete(id) {
+            if (confirm("¿Estás seguro de que deseas eliminar este elemento?")) {
+                document.getElementById('delete-form-' + id).submit();
+            }
+        }
+    </script>
+</body>
+</html>
